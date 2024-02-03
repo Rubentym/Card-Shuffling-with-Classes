@@ -1,0 +1,13 @@
+class Deck:
+    def __init__(self):
+        self.suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
+        self.ranks = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King', 'Ace']
+        self.cards = [{'Rank': rank, 'Suit': suit} for rank in self.ranks for suit in self.suits]
+
+    def shuffle(self):
+        random.shuffle(self.cards)
+
+# Example usage
+new_deck = Deck()
+new_deck.shuffle()
+print("Shuffled deck:", new_deck.cards)
